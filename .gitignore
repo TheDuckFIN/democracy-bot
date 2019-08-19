@@ -1,0 +1,7 @@
+*.egg
+*.egg-info
+
+# Ignore virtual env created by poetry
+.venv
+
+__pycache__
