@@ -3,7 +3,8 @@
 from discord.ext import commands
 
 from .config import Config
-from .commands.voting import Voting
+from .voting import Voting
+from .commands.text_channel import TextChannel
 
 # pylint: disable=unused-variable
 
@@ -15,6 +16,7 @@ def run():
     bot = commands.Bot(command_prefix="!")
 
     bot.add_cog(Voting(bot))
+    bot.add_cog(TextChannel(bot))
 
     @bot.event
     async def on_ready():
